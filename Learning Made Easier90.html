@@ -1,0 +1,827 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>Learning Made Easy</title>  <style>  
+body {  
+  margin: 0;  
+  font-family: Arial, sans-serif;  
+  background: black;  
+  color: white;  
+  background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475');  
+  background-size: cover;  
+  background-attachment: fixed;  
+}  
+  
+header {  
+  text-align: center;  
+  padding: 40px;  
+  background: rgba(0,0,0,0.7);  
+}  
+  
+h1 {  
+  color: hotpink;  
+  margin-bottom: 5px;  
+}  
+  
+p {  
+  color: white;  
+}  
+  
+.courses {  
+  text-align: center;  
+  padding: 20px;  
+}  
+  
+.grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  
+  gap: 10px;  
+  padding: 20px;  
+}  
+  
+button {  
+  padding: 12px;  
+  background: hotpink;  
+  color: black;  
+  border: none;  
+  cursor: pointer;  
+  font-weight: bold;  
+  border-radius: 5px;  
+}  
+  
+button:hover {  
+  background: black;  
+  color: hotpink;  
+  border: 1px solid hotpink;  
+}  
+  
+.notes {  
+  background: rgba(0,0,0,0.85);  
+  padding: 30px;  
+  margin: 20px;  
+  border: 1px solid hotpink;  
+  min-height: 150px;  
+}  
+  
+footer {  
+  text-align: center;  
+  padding: 20px;  
+  color: hotpink;  
+  background: black;  
+  margin-top: 40px;  
+}  
+</style>  </head>  <body>  <header>  
+  <h1>Learning Made Easy</h1>  
+  <p>Computer Science & Education Notes Hub</p>  
+</header>  <section class="courses">  
+  <h2>Courses</h2>    <div class="grid">  
+    <button onclick="openCourse('oop')">CSC 302 - OOP</button>  
+    <button onclick="openCourse('data')">Data Structures</button>  
+    <button onclick="openCourse('arch')">CSC 315 - Computer Architecture</button>  
+    <button onclick="openCourse('compiler')">CSC 316 - Compiler Construction</button>  
+    <button onclick="openCourse('os')">Operating Systems</button>  
+    <button onclick="openCourse('db')">Database Systems</button>  <button onclick="openCourse('edu303')">EDU 303</button>  
+<button onclick="openCourse('edu304')">EDU 304</button>  
+<button onclick="openCourse('edu305')">EDU 305</button>  
+<button onclick="openCourse('edu306')">EDU 306</button>
+
+  </div>  
+</section>  <section class="notes">  
+  <h2>Course Notes</h2>  
+  <div id="content">Click a course to view notes</div>  
+</section>  <footer>  
+  © 2026 Learning Made Easy — Created by Lawal Aishat Oluwanifemi  
+</footer>  <script>  
+function openCourse(course) {  
+  
+  let notes = "";  
+  
+  switch(course) {  
+  
+      case "oop":  
+  notes = `  
+    
+  <h2>Object Oriented Programming (OOP)</h2>  
+  
+  <h3>Introduction to OOP</h3>  
+  <p>  
+  Object Oriented Programming (OOP) is a programming paradigm that organizes software design around objects, which are instances of classes. Each object contains data (attributes) and methods (functions) that operate on that data. OOP is designed to simulate real-world entities in programming form.  
+  </p>  
+  
+  <h4>Importance of OOP</h4>  
+  <ul>  
+    <li>Helps model real-world systems like banking and school systems</li>  
+    <li>Improves code reusability through inheritance</li>  
+    <li>Enhances modularity by breaking large programs into smaller parts</li>  
+    <li>Improves security through encapsulation</li>  
+    <li>Makes software easier to maintain and update</li>  
+  </ul>  
+  
+  <h4>Advantages</h4>  
+  <ul>  
+    <li>Code reusability reduces repetition</li>  
+    <li>Easy maintenance and debugging</li>  
+    <li>Better organization of complex programs</li>  
+    <li>Improved data security</li>  
+    <li>Real-world modeling</li>  
+  </ul>  
+  
+  <h4>Disadvantages</h4>  
+  <ul>  
+    <li>Difficult for beginners</li>  
+    <li>Requires more memory</li>  
+    <li>Can be slower due to abstraction</li>  
+    <li>Risk of over-engineering</li>  
+  </ul>  
+  
+  <h4>Example</h4>  
+  <p>Banking system where customers are objects and actions like deposit/withdrawal are methods.</p>  
+  
+  <h3>Classes and Objects</h3>
+
+<p>
+Classes and Objects are the foundation of Object Oriented Programming. Every OOP program is built using these two concepts.
+</p>
+
+<h4>What is a Class?</h4>
+<p>
+A class is a blueprint or template used to create objects. It defines the structure and behavior (attributes and methods) that the objects will have.
+</p>
+
+<ul>
+  <li>A class is not a real object</li>
+  <li>It does not take memory when defined</li>
+  <li>It is used to create objects</li>
+</ul>
+
+<h4>What is an Object?</h4>
+<p>
+An object is an instance of a class. It is a real entity that has values and occupies memory in the program.
+</p>
+
+<ul>
+  <li>An object is a real-world entity</li>
+  <li>It has actual values for attributes</li>
+  <li>It can perform actions using methods</li>
+</ul>
+
+<h4>Difference Between Class and Object</h4>
+
+<ul>
+  <li><b>Class:</b> Blueprint or design</li>
+  <li><b>Object:</b> Real instance created from the class</li>
+</ul>
+
+<h4>Simple Analogy</h4>
+<p>
+Think of a class like a cookie cutter, and objects like the cookies made from it.
+</p>
+
+<ul>
+  <li>Cookie cutter = Class</li>
+  <li>Cookies = Objects</li>
+</ul>
+
+<h4>Real-Life Example</h4>
+<p>
+In a university system:
+</p>
+
+<ul>
+  <li>Class: Student</li>
+  <li>Objects: Aisha, John, David (actual students)</li>
+</ul>
+
+<h4>Example in Programming Idea</h4>
+<p>
+A Car class can be used to create multiple car objects:
+</p>
+
+<ul>
+  <li>Car 1: Toyota Camry (red, 120km/h)</li>
+  <li>Car 2: Honda Civic (blue, 140km/h)</li>
+</ul>
+
+<h3>Attributes and Methods</h3>
+
+<p>
+In Object Oriented Programming, classes are made up of two main components: attributes and methods. These are the building blocks that define what an object is and what it can do.
+</p>
+
+<h4>Attributes</h4>
+<p>
+Attributes are variables inside a class that store data about an object. They describe the properties or state of an object.
+</p>
+
+<ul>
+  <li>Also called properties or fields</li>
+  <li>Define the characteristics of an object</li>
+  <li>Each object can have different values for the same attribute</li>
+</ul>
+
+<h5>Examples of Attributes</h5>
+<ul>
+  <li>name</li>
+  <li>age</li>
+  <li>color</li>
+  <li>speed</li>
+</ul>
+
+<p><b>Example:</b> A Car object may have attributes like color = red, speed = 120km/h.</p>
+
+<br>
+
+<h4>Methods</h4>
+<p>
+Methods are functions defined inside a class that describe the behavior or actions of an object.
+</p>
+
+<ul>
+  <li>Also called functions or procedures</li>
+  <li>Define what an object can do</li>
+  <li>They usually operate on attributes</li>
+</ul>
+
+<h5>Examples of Methods</h5>
+<ul>
+  <li>drive()</li>
+  <li>stop()</li>
+  <li>accelerate()</li>
+  <li>calculateSalary()</li>
+</ul>
+
+<p><b>Example:</b> A Car object may have methods like drive() and stop().</p>
+
+<br>
+
+<h4>Difference Between Attributes and Methods</h4>
+
+<ul>
+  <li><b>Attributes:</b> describe what an object has</li>
+  <li><b>Methods:</b> describe what an object does</li>
+</ul>
+
+<br>
+
+<h4>Simple Analogy</h4>
+<p>
+Think of a human being:
+</p>
+
+<ul>
+  <li>Attributes → name, height, age, eye color</li>
+  <li>Methods → walk(), talk(), sleep(), eat()</li>
+</ul>
+
+<h3>Encapsulation</h3>
+
+<p>
+Encapsulation is one of the fundamental principles of Object Oriented Programming. It refers to the process of wrapping data (attributes) and methods (functions) into a single unit (class) while restricting direct access to some of the object’s components.
+</p>
+
+<h4>Meaning</h4>
+<p>
+Encapsulation means "data hiding" — it protects the internal state of an object and only allows access through defined methods.
+</p>
+
+<h4>Why Encapsulation is Important</h4>
+<ul>
+  <li>It protects data from unauthorized access</li>
+  <li>It helps control how data is modified</li>
+  <li>It improves security of the program</li>
+  <li>It makes code easier to maintain and debug</li>
+</ul>
+
+<h4>How Encapsulation Works</h4>
+<p>
+In encapsulation, class variables are usually made private, and access is provided using special methods called getters and setters.
+</p>
+
+<ul>
+  <li><b>Getter:</b> used to read or access data</li>
+  <li><b>Setter:</b> used to modify or update data</li>
+</ul>
+
+<h4>Example Analogy</h4>
+<p>
+Think of a bank account:
+</p>
+
+<ul>
+  <li>You cannot directly change your balance</li>
+  <li>You must use methods like deposit() or withdraw()</li>
+  <li>The system controls how money is added or removed</li>
+</ul>
+
+<h4>Real-Life Example</h4>
+<p>
+A capsule medicine is a good example of encapsulation. The inside medicine is hidden and protected, but you can still use it by taking the capsule.
+</p>
+
+<h4>Advantages of Encapsulation</h4>
+<ul>
+  <li>Improves security of data</li>
+  <li>Reduces complexity</li>
+  <li>Helps control access to data</li>
+  <li>Makes the system more flexible and maintainable</li>
+</ul>
+
+<h4>Disadvantages of Encapsulation</h4>
+<ul>
+  <li>Can increase code complexity</li>
+  <li>Requires extra methods (getters/setters)</li>
+  <li>May make development slightly slower</li>
+</ul>
+
+<h3>Inheritance</h3>
+
+<p>
+Inheritance is a fundamental principle of Object Oriented Programming that allows one class to acquire the properties and behaviors (attributes and methods) of another class.
+</p>
+
+<h4>Meaning</h4>
+<p>
+It is a mechanism where a new class (child class) is derived from an existing class (parent class), promoting code reuse and hierarchy.
+</p>
+
+<h4>Types of Inheritance</h4>
+<ul>
+  <li><b>Single Inheritance:</b> One child class inherits from one parent class</li>
+  <li><b>Multilevel Inheritance:</b> A class inherits from a class which is also a child of another class</li>
+  <li><b>Hierarchical Inheritance:</b> Multiple child classes inherit from one parent class</li>
+  <li><b>Multiple Inheritance:</b> A class inherits from more than one parent class (supported in some languages like C++)</li>
+</ul>
+
+<h4>Key Terms</h4>
+<ul>
+  <li><b>Parent Class (Superclass):</b> The class being inherited from</li>
+  <li><b>Child Class (Subclass):</b> The class that inherits properties</li>
+</ul>
+
+<h4>Importance of Inheritance</h4>
+<ul>
+  <li>Promotes code reusability</li>
+  <li>Reduces repetition of code</li>
+  <li>Makes code easier to maintain</li>
+  <li>Improves organization of programs</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of inheritance like family traits:
+</p>
+
+<ul>
+  <li>A child inherits eye color, height, or facial features from parents</li>
+  <li>But also has their own unique traits</li>
+</ul>
+
+<h4>Example in Programming Idea</h4>
+<p>
+Animal → Parent class<br>
+Dog → Child class (inherits from Animal)
+</p>
+
+<ul>
+  <li>Animal can: eat(), sleep()</li>
+  <li>Dog can: eat(), sleep(), bark()</li>
+</ul>
+<h3>Polymorphism</h3>
+
+<p>
+Polymorphism is one of the core principles of Object Oriented Programming. It means "many forms", where a single action or method can behave in different ways depending on the context.
+</p>
+
+<h4>Meaning</h4>
+<p>
+Polymorphism allows methods to perform different tasks based on the object that is calling them or the parameters passed to them.
+</p>
+
+<h4>Types of Polymorphism</h4>
+
+<ul>
+  <li><b>Compile-time Polymorphism (Method Overloading):</b> Same method name but different parameters</li>
+  <li><b>Run-time Polymorphism (Method Overriding):</b> A child class provides a specific implementation of a method already defined in the parent class</li>
+</ul>
+
+<h4>Method Overloading</h4>
+<p>
+This occurs when multiple methods have the same name but different number or type of parameters.
+</p>
+
+<p><b>Example idea:</b> A function called "add()" can add two numbers or three numbers depending on inputs.</p>
+
+<h4>Method Overriding</h4>
+<p>
+This happens when a child class redefines a method that already exists in the parent class.
+</p>
+
+<p><b>Example idea:</b> A general class "Animal" has a method sound(), but a "Dog" class overrides it to bark().
+</p>
+
+<h4>Importance of Polymorphism</h4>
+
+<ul>
+  <li>Makes code more flexible and reusable</li>
+  <li>Reduces complexity by using one interface for different behaviors</li>
+  <li>Improves scalability of applications</li>
+  <li>Makes programs easier to extend</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of a person who behaves differently depending on situation:
+</p>
+
+<ul>
+  <li>At school → student behavior</li>
+  <li>At home → child behavior</li>
+  <li>At work → employee behavior</li>
+</ul>
+
+<p>Same person, different behaviors = Polymorphism</p>
+
+<h4>Programming Example Idea</h4>
+
+<ul>
+  <li>Shape → draw()</li>
+  <li>Circle → draw() draws a circle</li>
+  <li>Square → draw() draws a square</li>
+</ul>
+
+<h3>Abstraction</h3>
+
+<p>
+Abstraction is one of the fundamental principles of Object Oriented Programming that focuses on hiding complex implementation details and showing only the essential features of an object.
+</p>
+
+<h4>Meaning</h4>
+<p>
+Abstraction means simplifying reality by exposing only what is necessary and hiding internal details that are not needed by the user.
+</p>
+
+<h4>How Abstraction Works</h4>
+<p>
+In abstraction, the user only interacts with the functionality of an object, without knowing how it is implemented internally.
+</p>
+
+<ul>
+  <li>Focus is on WHAT an object does, not HOW it does it</li>
+</ul>
+
+<h4>Types of Abstraction</h4>
+
+<ul>
+  <li><b>Abstract Classes:</b> Classes that cannot be instantiated and may contain abstract methods</li>
+  <li><b>Interfaces:</b> A blueprint that defines methods without implementation (depending on language)</li>
+</ul>
+
+<h4>Importance of Abstraction</h4>
+
+<ul>
+  <li>Reduces complexity of systems</li>
+  <li>Improves code readability and maintainability</li>
+  <li>Helps focus on essential features only</li>
+  <li>Increases security by hiding internal details</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of using a car:
+</p>
+
+<ul>
+  <li>You press the accelerator to move</li>
+  <li>You press the brake to stop</li>
+</ul>
+
+<p>
+You don’t need to know how the engine works internally — that complexity is hidden from you.
+</p>
+
+<h4>Another Example</h4>
+<p>
+When you use a phone app:
+</p>
+
+<ul>
+  <li>You tap icons to perform actions</li>
+  <li>You don’t see the backend code or system processes</li>
+</ul>
+
+<h4>Programming Idea Example</h4>
+
+<ul>
+  <li>A class "BankSystem" provides withdraw() and deposit()</li>
+  <li>The user doesn’t see how balance calculations are done internally</li>
+</ul>
+
+<h3>Constructors and Destructors</h3>
+
+<h4>Constructor</h4>
+<p>
+A constructor is a special method in a class that is automatically called when an object is created. It is used to initialize the object.
+</p>
+
+<h4>Types of Constructors</h4>
+<ul>
+  <li><b>Default Constructor:</b> Takes no parameters and assigns default values</li>
+  <li><b>Parameterized Constructor:</b> Takes parameters to initialize objects with specific values</li>
+  <li><b>Copy Constructor:</b> Creates a new object using an existing object</li>
+</ul>
+
+<h4>Importance of Constructors</h4>
+<ul>
+  <li>Automatically initializes objects</li>
+  <li>Saves time in setting up values</li>
+  <li>Makes code cleaner and more organized</li>
+</ul>
+
+<h4>Destructor</h4>
+<p>
+A destructor is a special method used to destroy objects and free up memory when the object is no longer needed.
+</p>
+
+<h4>Importance of Destructors</h4>
+<ul>
+  <li>Frees memory automatically</li>
+  <li>Helps manage system resources</li>
+  <li>Prevents memory leaks</li>
+</ul>
+
+<h4>Simple Analogy</h4>
+<ul>
+  <li>Constructor = building a house</li>
+  <li>Destructor = demolishing the house when it's no longer needed</li>
+</ul>
+
+<h3>Exception Handling</h3>
+
+<p>
+Exception handling is a mechanism used to handle runtime errors and prevent programs from crashing unexpectedly.
+</p>
+
+<h4>Meaning</h4>
+<p>
+An exception is an unexpected error that occurs during program execution. Exception handling allows the program to deal with these errors gracefully.
+</p>
+
+<h4>Key Keywords</h4>
+<ul>
+  <li><b>try:</b> Block of code that may cause an error</li>
+  <li><b>catch:</b> Handles the error if it occurs</li>
+  <li><b>finally:</b> Executes code regardless of error</li>
+  <li><b>throw:</b> Used to manually trigger an exception</li>
+</ul>
+
+<h4>Importance</h4>
+<ul>
+  <li>Prevents program crashes</li>
+  <li>Improves user experience</li>
+  <li>Makes debugging easier</li>
+  <li>Ensures program continues running safely</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of an ATM machine:
+</p>
+
+<ul>
+  <li>If you enter wrong PIN, it shows an error instead of shutting down</li>
+  <li>The system handles the mistake without crashing</li>
+</ul>
+
+<h3>File Handling</h3>
+
+<p>
+File handling is the process of storing data in files and retrieving it when needed. It allows programs to work with permanent data storage.
+</p>
+
+<h4>Meaning</h4>
+<p>
+Instead of losing data when a program closes, file handling allows data to be saved in files for later use.
+</p>
+
+<h4>File Operations</h4>
+<ul>
+  <li><b>Create:</b> Creating a new file</li>
+  <li><b>Write:</b> Adding data to a file</li>
+  <li><b>Read:</b> Retrieving data from a file</li>
+  <li><b>Append:</b> Adding data without deleting existing content</li>
+</ul>
+
+<h4>Importance of File Handling</h4>
+<ul>
+  <li>Permanent data storage</li>
+  <li>Easy data retrieval</li>
+  <li>Useful for large applications</li>
+  <li>Reduces memory dependency</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of a notebook:
+</p>
+
+<ul>
+  <li>You write information in it (write operation)</li>
+  <li>You read it later when needed (read operation)</li>
+</ul>
+
+<h3>Dynamic Memory Allocation</h3>
+
+<p>
+Dynamic memory allocation is the process of allocating memory to a program during runtime (while the program is running) instead of compile time.
+</p>
+
+<h4>Meaning</h4>
+<p>
+It allows programs to request memory when needed and release it when no longer required, making programs more flexible and efficient.
+</p>
+
+<h4>Key Concepts</h4>
+<ul>
+  <li><b>Heap Memory:</b> Area where dynamic memory is allocated</li>
+  <li><b>malloc / free (C):</b> Used for allocating and freeing memory</li>
+  <li><b>new / delete (C++):</b> Used for dynamic memory operations</li>
+</ul>
+
+<h4>Importance</h4>
+<ul>
+  <li>Efficient use of memory</li>
+  <li>Allows flexible data structures like linked lists</li>
+  <li>Prevents memory wastage</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Think of renting a room:
+</p>
+<ul>
+  <li>You rent space when you need it</li>
+  <li>You leave when you no longer need it</li>
+</ul>
+
+<h3>UML Diagrams</h3>
+
+<p>
+UML (Unified Modeling Language) diagrams are visual tools used to design and represent software systems before coding.
+</p>
+
+<h4>Meaning</h4>
+<p>
+UML helps developers visualize how a system will look and function.
+</p>
+
+<h4>Types of UML Diagrams</h4>
+<ul>
+  <li><b>Class Diagram:</b> Shows classes and relationships</li>
+  <li><b>Object Diagram:</b> Shows real instances of classes</li>
+  <li><b>Use Case Diagram:</b> Shows system interactions with users</li>
+</ul>
+
+<h4>Relationships in UML</h4>
+<ul>
+  <li>Association</li>
+  <li>Aggregation</li>
+  <li>Composition</li>
+  <li>Inheritance</li>
+</ul>
+
+<h4>Importance</h4>
+<ul>
+  <li>Helps in system design</li>
+  <li>Makes software planning easier</li>
+  <li>Improves communication between developers</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+UML is like an architectural blueprint before building a house.
+</p>
+
+<h3>Event-Driven Programming</h3>
+
+<p>
+Event-driven programming is a programming paradigm where the flow of the program is determined by events such as user actions or system-generated signals.
+</p>
+
+<h4>Meaning</h4>
+<p>
+Instead of running step-by-step, the program waits for events like clicks, inputs, or actions, then responds to them.
+</p>
+
+<h4>Common Events</h4>
+<ul>
+  <li>Mouse click</li>
+  <li>Keyboard input</li>
+  <li>Button press</li>
+  <li>System notifications</li>
+</ul>
+
+<h4>How It Works</h4>
+<ul>
+  <li>User triggers an event</li>
+  <li>Program detects the event</li>
+  <li>Event handler responds to it</li>
+</ul>
+
+<h4>Importance</h4>
+<ul>
+  <li>Makes applications interactive</li>
+  <li>Used in GUIs and web apps</li>
+  <li>Improves user experience</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+A doorbell system:
+</p>
+<ul>
+  <li>Bell rings (event)</li>
+  <li>Someone responds and opens the door (handler)</li>
+</ul>
+
+<h3>OOP in Programming Languages</h3>
+
+<p>
+Object Oriented Programming is implemented in many modern programming languages, each with its own level of support.
+</p>
+
+<h4>Languages Supporting OOP</h4>
+<ul>
+  <li><b>Java:</b> Fully object-oriented language</li>
+  <li><b>C++:</b> Supports both procedural and OOP</li>
+  <li><b>Python:</b> Flexible and easy OOP implementation</li>
+  <li><b>C#:</b> Modern OOP language used in software development</li>
+</ul>
+
+<h4>Importance</h4>
+<ul>
+  <li>Used in web applications</li>
+  <li>Used in mobile apps</li>
+  <li>Used in game development</li>
+  <li>Used in enterprise systems</li>
+</ul>
+
+<h4>Real-Life Analogy</h4>
+<p>
+Different languages are like different tools, but all can build the same type of house (software).
+</p>
+  `;
+  break;  
+  
+    case "data":  
+      notes = `  
+      <h3>Data Structures</h3>  
+      <p>Study of organizing data efficiently.</p>  
+      <p>Examples: Arrays, Linked Lists, Stacks, Queues.</p>  
+      `;  
+      break;  
+  
+    case "arch":  
+      notes = `  
+      <h3>Computer Architecture</h3>  
+      <p>Study of CPU, memory, and system design.</p>  
+      <p>Focus on instruction cycles and performance.</p>  
+      `;  
+      break;  
+  
+    case "compiler":  
+      notes = `  
+      <h3>Compiler Construction</h3>  
+      <p>Converts high-level language into machine code.</p>  
+      <p>Phases: Lexical, Syntax, Semantic analysis.</p>  
+      `;  
+      break;  
+  
+    case "os":  
+      notes = `<h3>Operating Systems</h3><p>Manages hardware and software resources.</p>`;  
+      break;  
+  
+    case "db":  
+      notes = `<h3>Database Systems</h3><p>Stores and manages structured data.</p>`;  
+      break;  
+  
+    case "edu303":  
+      notes = `<h3>EDU 303 - Special Methods</h3><p>Teaching strategies and methods.</p>`;  
+      break;  
+  
+    case "edu304":  
+      notes = `<h3>EDU 304 - Curriculum Development</h3><p>Designing educational programs.</p>`;  
+      break;  
+  
+    case "edu305":  
+      notes = `<h3>EDU 305 - Educational Technology</h3><p>Use of technology in teaching.</p>`;  
+      break;  
+  
+    case "edu306":  
+      notes = `<h3>EDU 306 - Research Methods</h3><p>Systematic study and data analysis.</p>`;  
+      break;  
+  }  
+  
+  document.getElementById("content").innerHTML = notes;  
+}  
+</script>  </body>  
+</html>  t his is what i have am i correct
